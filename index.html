@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>cart</title>
+</head>
+
+<body>
+    <!----extra--love&romance-->
+    <section class="buy">
+        <h3 style="text-align: center;" class="sec-title"><span>LOVE & ROMANCE</span></h3>
+        <p style="text-align: center;" class="sec-descrip">Check out the Exotic Fresh Flower Bouquets to add more
+            freshness to your Love & Romance.</p>
+        <div class="sec-row">
+            <div class="insta-col">
+                <img src="images/Flower 01.png" alt="">
+                <h3>Circle of Love</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, deleniti? Optio nam tempore ipsa
+                    dolores aliquam maxime nulla aperiam quo.</p>
+                <h4>৳ 30.00</h4>
+                <button onclick="shopbtn(this)" class="hello-btn">shop here</button>
+            </div>
+            <div class="insta-col">
+                <img src="images/Rectangle 4.png" alt="">
+                <h3>Sweet Memory</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, deleniti? Optio nam tempore ipsa
+                    dolores aliquam maxime nulla aperiam quo.</p>
+                <h4>৳ 70.00</h4>
+                <button onclick="shopbtn(this)" class="hello-btn">shop here</button>
+            </div>
+            <div class="insta-col">
+                <img src="images/Rectangle 5.png" alt="">
+                <h3>Garden of Freshness</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, deleniti? Optio nam tempore ipsa
+                    dolores aliquam maxime nulla aperiam quo.</p>
+                <h4>৳ 40.00</h4>
+                <button onclick="shopbtn(this)" class="hello-btn">shop here</button>
+
+            </div>
+            <div class="insta-col" id="selectElement">
+                <h4>selexted iteam</h4>
+            </div>
+            total <h3 id="total"></h3>
+
+    </section>
+    <script>
+
+
+
+        let total = 0
+        function shopbtn(event) {
+            const selectElement = document.getElementById('selectElement')
+            const itemName = event.parentNode.childNodes[3].innerText
+            // console.log(itemName)
+            const li = document.createElement('li')
+            li.innerText = itemName
+            selectElement.appendChild(li)
+            // document.getElementById()
+            const price = parseFloat(event.parentNode.childNodes[7].innerText.split(" ")[1])
+            // console.log(price)
+            total = parseFloat(total + price)
+            document.getElementById('total').innerText = total
+
+        }
+
+
+        document.getElementById('selectElement').addEventListener('click', function (event) {
+            event.target.parentNode.removeChild(event.target)
+            const rtotal = parseFloat(document.getElementById('total').innerText)
+            console.log(rtotal)
+            const eleprices = document.querySelectorAll('.insta-col')
+            for (const eleprice of eleprices) {
+                const price = parseFloat(eleprice.childNodes[7].innerText.split(" ")[1])
+                console.log(price)
+
+                // const price = parseFloat(eleprice.innerText)
+                total = parseFloat(rtotal - price)
+                // console.log(total)
+                document.getElementById('total').innerText = total
+            }
+            // console.log(eleprice)
+
+
+        })
+
+    </script>
+
+</body>

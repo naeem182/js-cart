@@ -1,0 +1,62 @@
+.hello-btn {
+    border-radius: 8px;
+    background: #E55473;
+    margin: 7px;
+    border: none;
+    padding: 10px;
+
+
+}
+
+.hello-btn a {
+    text-decoration: none;
+    color: azure;
+    margin: 4px;
+    padding: 4px;
+}
+
+
+.sec-title {
+    color: #272727;
+    font-size: 60px;
+    font-weight: 800;
+    align-items: center;
+    margin-bottom: 1px;
+
+
+}
+
+.sec-descrip {
+
+    color: rgba(39, 39, 39, 0.60);
+    font-size: 18px;
+    font-weight: 600;
+    align-items: center;
+
+}
+
+/*extra sec buyyyyyy*/
+.buy {
+    width: 80%;
+    margin: auto;
+}
+
+.buy .sec-row {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/*insta design*/
+
+
+.insta-col {
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    margin-top: 10px;
+    text-align: center;
+
+
+}
